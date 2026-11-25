@@ -6,6 +6,8 @@ fn main() {
     let mut env = CartPole::default();
     let mut total_reward = 0.0;
 
+    let mut prog= Program();
+
     loop {
         let action = (rng.next_u32() % 4) as f32;
         let (_, reward, done) = env.step(action, &mut rng);
